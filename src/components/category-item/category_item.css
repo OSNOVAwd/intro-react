@@ -1,0 +1,16 @@
+.category-item {
+  border-bottom: 1px solid #808080;
+  height: 18vh;
+  padding: 30px 15px;
+}
+
+.category-item h3 {
+  margin: 10px 0; 
+  color:#2e2d2d;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.category-item p {
+  color: #808080;
+}
