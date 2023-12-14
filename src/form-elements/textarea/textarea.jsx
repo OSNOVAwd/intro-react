@@ -1,16 +1,15 @@
 
-const Textarea = ({id, children, rows, cols, placeholder}) => {
+const Textarea = ({id, children ,rows, cols,placeholder}) => {
   return (
-    <>
-      <label htmlFor={id}>{children}</label>
+    <div className="textarea">
+      <p>{children}</p>
       <textarea 
-        id={id} 
-        rows={rows} 
-        cols={cols} 
+        rows={rows}
+        cols={cols}
         placeholder={placeholder}
       >
       </textarea>
-    </>
+    </div>
   )
 }
 

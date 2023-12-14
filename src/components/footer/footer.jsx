@@ -45,9 +45,16 @@ const Footer = () => {
           placeholder={'ex. Subscriptions'}
         />
         
-
-        <Textarea/>
-        <Button/>
+        <Textarea 
+          id={'message'}
+          children={'MESSAGE'}
+          rows={5}
+          cols={78}
+          placeholder={'Send us a message'}
+        />
+        <Button 
+          type={'button'} 
+          children={'Send message'}/>
       </form>
     </div>
   )

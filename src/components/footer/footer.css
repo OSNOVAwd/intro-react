@@ -23,10 +23,39 @@
 }
 
 .footer form {
-  width: 40%;
+  width: 44%;
   height: 60vh;
   box-shadow: 0 5px 10px rgb(128, 128, 128, 0.3);
   border-radius: 10px;
   display: grid;
+  padding: 30px;
   grid-template-columns: auto auto;
+  gap:1rem;
+}
+
+.input input {
+  border-radius: 5px;
+  margin-top: 6px;
+  border-color: rgb(201, 200, 200);
+}
+
+.textarea {
+  grid-column: 1 / span 2;
+}
+
+.textarea textarea {
+  border-radius: 5px;
+  margin-top: 6px;
+  border-color: rgb(201, 200, 200);
+  padding: 18px;
+}
+ 
+form button {
+  border: none;
+  background-color: black;
+  color:#fff;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 12px;
 }
