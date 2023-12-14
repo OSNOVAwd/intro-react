@@ -26,7 +26,7 @@ const Main = () => {
       </div>
       <div className="category_tips">
         {data.map(item => (
-          <CategoryItem item={item}/>
+          <CategoryItem key={item.title} info={item}/>
         ))}
       </div>
     </div>
