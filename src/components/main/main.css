@@ -58,10 +58,11 @@
 }
 
 .tips_author {
-  width: 270px;
+  width: 290px;
   display: flex;
   align-items:center;
   justify-content: space-between;
+  gap: 10px;
 }
 .tips_author span {
   display: flex;

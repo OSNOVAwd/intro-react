@@ -8,3 +8,4 @@ export {default as Contact} from './contact/contact';
 export {default as Login} from './login/login';
 export {default as SignUp} from './sign-up/sign-up';
 export {default as Faq} from './faq/faq';
+export {default as Products} from './products/products';
