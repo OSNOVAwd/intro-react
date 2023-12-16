@@ -1,6 +1,6 @@
 import { CiSearch, CiLogin } from "react-icons/ci";
 import { LuMessageSquare } from "react-icons/lu";
-
+import {Link} from 'react-router-dom';
 import './navbar.css' 
 
 const Navbar = () => {
@@ -10,20 +10,20 @@ const Navbar = () => {
         <h2>Logo</h2>
       </div>
       <ul>
-        <li>Home</li>
-        <li>Contact Us</li>
-        <li>Products</li>
-        <li>Faqs</li>
-        <li>About</li>
+        <Link to={'/'}>Home</Link>
+        <Link to={'/contact'}>Contact Us</Link>
+        <Link to={''}>Products</Link>
+        <Link to={'/faq'}>Faqs</Link>
+        <Link to={'/about'}>About</Link>
       </ul>
       <form action="">
         <input type="text" placeholder="Search.."/>
         <div className="search-icon"><CiSearch/></div>
       </form>
       <ul className="login">
-        <li><LuMessageSquare id="message"/> </li>
-        <li><CiLogin id="sign-in"/></li>
-        <li id="sign-up">Sign Up</li>
+        <li><LuMessageSquare id="message"/></li>
+        <Link to={'/login'}><CiLogin id="sign-in"/></Link>
+        <Link to={'/sign-up'} id="sign-up">Sign Up</Link>
       </ul>
     </div>
   )

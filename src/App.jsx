@@ -1,18 +1,16 @@
-import { HomePage } from "./components"
-
+import { About, Contact, Faq, HomePage, Login, SignUp } from "./components"
+import {Routes, Route} from 'react-router-dom'
 
 const App = () => {
   return (
-    <div className="container">
-      <HomePage/>
-
-      {/* <Products/>
-      <About/>
-      <SignUp/>
-      <Login/>
-      <Contact/>
-      <Faq/> */}
-    </div>
+      <Routes>
+        <Route path="/" element={<HomePage/>}/>
+        <Route path="/about" element={<About/>}/>
+        <Route path="/contact" element={<Contact/>}/>
+        <Route path="/faq" element={<Faq/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/sign-up" element={<SignUp/>}/>
+      </Routes>
   )
 }
 
