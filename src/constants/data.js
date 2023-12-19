@@ -1,14 +1,28 @@
-export const data = [
+
+
+import { CiSearch } from "react-icons/ci";
+
+export const listItems = [
   {
-    title: 'TIPS',
-    describe: '3 tips to avoid Internet distractions at work'
+    link: 'Home',
   },
   {
-    title: 'RESOURCES',
-    describe: '7 great productivity apps for your new iPad'
+    link: 'Shop'
   },
   {
-    title: 'GIUDES',
-    describe: 'How to create an organized productivity plan for the year'
+    link: 'About'
   },
+  {
+    link: 'Vegatables'
+  },
+  {
+    link: 'Blog'
+  }, 
+  {
+    link: 'Contact Us'
+  },
+  {
+    link: <CiSearch/>
+  }
+  
 ]

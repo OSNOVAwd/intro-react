@@ -1,10 +1,9 @@
 import './category_item.css'
 
-const CategoryItem = ({info}) => {
+const CategoryItem = () => {
   return (
     <div className="category-item">
-      <p>{info.title}</p>
-      <h3>{info.describe}</h3>
+      CategoryItem
     </div>
   )
 }
