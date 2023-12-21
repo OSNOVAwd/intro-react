@@ -1,11 +1,10 @@
 export {default as Navbar} from './navbar/navbar';
-export {default as Main} from './main/main';
 export {default as Footer} from './footer/footer';
 export {default as HomePage} from './home-page/home-page';
-export {default as CategoryItem} from './category-item/category-item';
 export {default as About} from './about/about';
 export {default as Contact} from './contact/contact';
 export {default as Login} from './login/login';
 export {default as SignUp} from './sign-up/sign-up';
-export {default as Faq} from './faq/faq';
 export {default as Products} from './products/products';
+export {default as Blog} from './blog/blog';
+export {default as SimpleSlider} from './slider/slider';

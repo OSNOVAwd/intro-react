@@ -1,11 +1,13 @@
 import React from 'react'
-import {Navbar} from './components';
+import {HomePage, Navbar, Footer} from './components';
 
 const App = () => {
   return (
-    <>
+    <div className="overflow-hidden">
       <Navbar/>
-    </>
+      <HomePage/>
+      <Footer/>
+    </div>
   )
 }
 

@@ -1,12 +1,8 @@
-import {Footer, Main, Navbar} from '../'
+import {SimpleSlider} from '../'
 
 const HomePage = () => {
   return (
-    <div className="container">
-      <Navbar/>
-      <Main/>
-      <Footer/>
-    </div>
+      <SimpleSlider/>
   )
 }
 
