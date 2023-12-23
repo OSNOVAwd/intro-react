@@ -1,4 +1,3 @@
-import './sign-up.css';
 
 const SignUp = () => {
   return (

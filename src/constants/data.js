@@ -5,27 +5,33 @@ import { CiSearch } from "react-icons/ci";
 export const listItems = [
   {
     link: 'Home',
+    url: '/',
   },
   {
-    link: 'Shop'
+    link: 'Shop',
+    url: '/shop'
   },
   {
-    link: 'About'
+    link: 'About',
+    url: '/about'
   },
   {
-    link: 'Vegatables'
-  },
-  {
-    link: 'Blog'
+    link: 'Blog',
+    url: '/blog'
   }, 
   {
-    link: 'Contact Us'
+    link: 'Contact Us',
+    url: '/contact'
   },
   {
     link: <CiSearch/>
+  },
+  {
+    link: 'Sign Up',
+    url: '/sign-up'
   }
-  
 ]
+
 
 export const slideData = [
   {
@@ -45,3 +51,5 @@ export const slideData = [
   },
 
 ]
+
+export const products = []

@@ -1,8 +1,11 @@
-import {SimpleSlider} from '../'
+import {About, SimpleSlider} from '../'
 
 const HomePage = () => {
   return (
+    <>
       <SimpleSlider/>
+      <About/>
+    </>
   )
 }
 

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { listItems } from "../../constants/data"
 
 const Navbar = () => {
@@ -7,12 +8,13 @@ const Navbar = () => {
       <ul className="flex gap-12">
           {
             listItems.map(item => (
-                <li 
+                <Link 
+                  to={item.url} 
                   key={item.link} 
                   className="flex items-center text-white font-medium text-lg duration-300 hover:text-black"
                 >
                   {item.link}
-                </li>
+                </Link>
             ))
           }
       </ul>
