@@ -1,6 +1,4 @@
 
-
-import { CiSearch } from "react-icons/ci";
 import { Avacado, Broukli, Bulgor, Chesnok, Joxori, Karam, Kareski, Kartoshka, Piyoz, Pomidor, Qalampir, Qovoq, Sabzi } from "../assets";
 
 export const listItems = [
@@ -24,13 +22,6 @@ export const listItems = [
     link: 'Contact Us',
     url: '/contact'
   },
-  {
-    link: <CiSearch/>
-  },
-  {
-    link: 'Sign Up',
-    url: '/sign-up'
-  }
 ]
 
 

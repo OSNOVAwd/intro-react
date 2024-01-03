@@ -1,7 +1,9 @@
 
 const SignUp = () => {
   return (
-    <div>SignUp</div>
+    <div className="h-screen bg-gradient-to-b from-green-400 to-white">
+      
+    </div>
   )
 }
 

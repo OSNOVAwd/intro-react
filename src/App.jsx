@@ -6,17 +6,14 @@ const App = () => {
   return (
     <div className="overflow-hidden">
       <Navbar/>
-      
       <Routes>
         <Route path='/' element={<HomePage/>}/>
         <Route path='/shop' element={<Products/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/blog' element={<Blog/>}/>
         <Route path='/contact' element={<Contact/>}/>
-        <Route path='/sign-up' element={<SignUp/>}/>
       </Routes>
-      
-      <Footer/>
+      <Footer/> 
     </div>
   )
 }

@@ -1,8 +1,6 @@
 
-const Input = ({id, type, classes, name, children, placeholder}) => {
+const Input = ({id, type, classes, name, placeholder}) => {
   return (
-    <div className="input">
-      <label htmlFor={id}>{children}</label>
       <input 
         type={type} 
         id={id} 
@@ -10,7 +8,6 @@ const Input = ({id, type, classes, name, children, placeholder}) => {
         name={name} 
         placeholder={placeholder}
       />
-    </div>
   )
 }
 

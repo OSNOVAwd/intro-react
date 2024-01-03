@@ -2,7 +2,10 @@
 import Button from './../../form-elements/button/button';
 const Product = ({product}) => {
   return (
-    <div key={product.title} className="bg-white rounded-lg shadow-lg h-[410px] duration-300 hover:scale-105 hover:shadow-2xl ">
+    <div 
+      data-aos="fade-down"
+      data-aos-duration="1000"
+      key={product.title} className="bg-white rounded-lg shadow-lg h-[410px] duration-300 hover:scale-105 hover:shadow-2xl ">
       <img
         src={product.image}
         alt={product.name}
