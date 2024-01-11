@@ -5,7 +5,7 @@ import Auth from './Auth/auth';
 
 const App = () => {
 
-  const [user, setUser] = useState(true)
+  const [user, setUser] = useState(false)
 
   if(!user){
     return (
