@@ -23,7 +23,7 @@ const SignIn = () => {
         const user = {email, password}
 
         try {
-            const response = await dispatch(loginuser(user))
+            const response = await dispatch(loginUser(user))
             if(response.payload) {
                 const {token} = response.payload.data
                 dispatch(signUserSuccess(response.payload))
