@@ -7,6 +7,40 @@ const SignUp = () => {
 
   const [sign, setSign] = useState(true)
   const [checked, setChecked] = useState()
+  const [name, setName] = useState('')
+  const [username, setUsername] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+  const dispatch = userDispatch()
+  const {isLoading, error} = useSelector(state => state.auth)
+
+  // Navigation
+  const navigate = useNavigate()
+
+  const registerHandler = async (e) => {
+    e.preventDefault();
+    dispatch(signUserStart());
+    const user = {name, username, email, password};
+
+    try{
+      const response =await dispatch(registerUser(user));
+      if(response.payload) {
+        const {token} = response.payload.data;
+        dispatch(signUserSuccess(response.payload));
+        setItem('token', token);
+        // DOMM ni bir marta refresh qilish
+        navigate('/home')
+        window.location.reload();
+      }
+    }catch (error) {
+      dispatch(signUserFailure(error.message));
+    }
+  };
+
+  const handleSign = () => {
+    setSign((prevSign) =>!prevSign);
+  };
 
   const handleSign = () => {
     if(sign){

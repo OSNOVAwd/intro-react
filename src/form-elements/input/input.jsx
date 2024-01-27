@@ -1,12 +1,13 @@
 
-const Input = ({id, type, classes, name, placeholder}) => {
+const Input = ({id, type, classes, placeholder, setState}) => {
   return (
       <input 
         type={type} 
         id={id} 
         className={classes} 
-        name={name} 
+        value={state}
         placeholder={placeholder}
+        onChange={(e) => setState(e.target.value)}
       />
   )
 }
