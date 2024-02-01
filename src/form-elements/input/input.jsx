@@ -1,5 +1,5 @@
 
-const Input = ({id, type, classes, placeholder, setState}) => {
+const Input = ({id, type, state, classes, placeholder, setState}) => {
   return (
       <input 
         type={type} 

@@ -1,6 +1,6 @@
 // setting data in cookie
 
-export const setItem = (key, data, expiraationDays = 1) => {
+export const setItem = (key, data, expirationDays = 1) => {
     try {
         const expires = new Date();
         expires.setDate(expires.getData() + expirationDays);
@@ -16,7 +16,7 @@ export const setItem = (key, data, expiraationDays = 1) => {
 export const getItem = (key) => {
     try{
         const name = `${key}=`;
-        const decodedCookie = decodeURLIComponent(document.cookie);
+        const decodedCookie = decodeURIComponent(document.cookie);
         const cookieArray = decodedCookie.split(';');
 
         for (let i = 0; i < cookieArray.length; i++){

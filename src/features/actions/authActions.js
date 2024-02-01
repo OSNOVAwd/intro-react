@@ -8,7 +8,7 @@ const LOGIN_ENDPOINT = `/login`;
 const LOGOUT_ENDPOINT = `/logout`;
 
 
-export const registerUser = createAsyncThunk("auth/register", async (userData, {dispatch}) => {
+export const registerUser = createAsyncThunk("auth/users", async () => {
     try{
     const {data} = await axios.post(REGISTER_ENDPOINT, userData);
     dispatch(signUserSuccess(data));
@@ -34,7 +34,7 @@ export const loginUser = createAsyncThunk("auth/login", async (userData, {dispat
 
 export const logoutUser = createAsyncThunk("auth/logout", async ({dispatch}) => {
     try{
-        const {data} = await axios.post(LOGOUT_ENDPOINT, userData);
+        const {data} = await axios.post(LOGOUT_ENDPOINT);
         dispatch(signUserSuccess(data));
         return data;
         } catch (error) {

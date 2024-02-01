@@ -1,11 +1,27 @@
 import { Link } from "react-router-dom"
 import { listItems } from "../../constants/data"
 import { useState } from "react"
-import { CiSearch } from "react-icons/ci"
+import Button from "../../form-elements/button/button";
+import {useDispatch} from 'react-redux';
+import {logoutUser, signUserFailure} from './../../features/user/authSlice';
+import { removeItem } from "../../helpers/cookie-storage"; 
 
 const Navbar = () => {
-
   const [isActive, setIsActive] = useState();
+  const dispatch = useDispatch();
+
+  const logoutHandler = () => {
+    try{
+      // Redux actionni chaqirish
+      dispatch(logoutUser());
+      // Saqlangan tokenni o'chirib tashlash
+      removeItem('token');
+
+      window.location.reload();
+    }catch (error) {
+      dispatch(signUserFailure(error))
+    }
+  };
 
   const onIsActive = (navLink) => {
     setIsActive(navLink);
@@ -33,6 +49,12 @@ const Navbar = () => {
             <CiSearch/>
           </div> */}
       </ul>
+      <Button 
+      className={'w-[100px] h-10 border-none rounded-xl bg-red-700 hover:bg-red-500 transition text-white font-semibold'}
+      type="submit"
+      children={"Sign Out"}
+      method={logoutHandler}
+      />
     </div>
   )
 }

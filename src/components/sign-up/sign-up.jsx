@@ -2,6 +2,11 @@ import { useState } from "react"
 import { SignUpImg } from "../../assets"
 import Button from "../../form-elements/button/button"
 import Input from "../../form-elements/input/input"
+import { useDispatch, useSelector } from "react-redux"
+import { useNavigate } from "react-router-dom"
+import { signUserFailure, signUserStart, signUserSuccess } from "../../features/user/authSlice"
+import { setItem } from "../../helpers/cookie-storage"
+import {registerUser} from '../../features/actions/authActions'
 
 const SignUp = () => {
 
@@ -12,7 +17,7 @@ const SignUp = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-  const dispatch = userDispatch()
+  const dispatch = useDispatch()
   const {isLoading, error} = useSelector(state => state.auth)
 
   // Navigation
@@ -24,7 +29,7 @@ const SignUp = () => {
     const user = {name, username, email, password};
 
     try{
-      const response =await dispatch(registerUser(user));
+      const response = await dispatch(registerUser(user));
       if(response.payload) {
         const {token} = response.payload.data;
         dispatch(signUserSuccess(response.payload));
@@ -41,14 +46,6 @@ const SignUp = () => {
   const handleSign = () => {
     setSign((prevSign) =>!prevSign);
   };
-
-  const handleSign = () => {
-    if(sign){
-      setSign(false)
-    }else {
-      setSign(true)
-    }
-  }
 
   const showPassword = () =>{
     if(checked){
