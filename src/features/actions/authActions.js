@@ -1,6 +1,10 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "../../services/api";
-import {signUserFailure, signUserSuccess} from "./../../features/user/authSlice"
+import {signUserFailure, signUserSuccess} from "./../../features/user/authSlice";
+import userData from "../user/authSlice"
+import dispatch from "../user/authSlice" 
+
+
 
 // API endpoints
 const REGISTER_ENDPOINT = `/register`;
